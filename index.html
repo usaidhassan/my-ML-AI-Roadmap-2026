@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Learning Roadmap Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Sidebar -->
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-header">
+    <div class="logo">
+      <div class="logo-icon"><i class="fas fa-brain"></i></div>
+      <div class="logo-text">
+        <span class="logo-title">AI Roadmap</span>
+        <span class="logo-sub">Learning Dashboard</span>
+      </div>
+    </div>
+    <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle Sidebar">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a href="#" class="nav-item active" data-page="dashboard">
+      <i class="fas fa-th-large"></i><span>Dashboard</span>
+    </a>
+    <a href="#" class="nav-item" data-page="roadmap">
+      <i class="fas fa-route"></i><span>Roadmap</span>
+    </a>
+    <a href="#" class="nav-item" data-page="statistics">
+      <i class="fas fa-chart-bar"></i><span>Statistics</span>
+    </a>
+    <a href="#" class="nav-item" data-page="notes">
+      <i class="fas fa-sticky-note"></i><span>Notes</span>
+    </a>
+    <a href="#" class="nav-item" data-page="search">
+      <i class="fas fa-search"></i><span>Search</span>
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="overall-progress-mini">
+      <span class="progress-label">Overall Progress</span>
+      <div class="mini-progress-bar">
+        <div class="mini-progress-fill" id="sidebar-progress-fill"></div>
+      </div>
+      <span class="progress-pct" id="sidebar-progress-pct">0%</span>
+    </div>
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+      <i class="fas fa-moon" id="theme-icon"></i>
+      <span id="theme-label">Dark Mode</span>
+    </button>
+  </div>
+</aside>
+
+<!-- Main Content -->
+<div class="main-wrapper" id="main-wrapper">
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button id="mobile-menu-btn" class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+      <div class="page-title-area">
+        <h1 class="page-title" id="page-title">Dashboard</h1>
+        <p class="page-subtitle" id="page-subtitle">Welcome back! Keep up the momentum 🚀</p>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="search-mini">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Quick search..." id="quick-search" />
+      </div>
+      <div class="streak-badge" id="streak-badge">
+        <i class="fas fa-fire"></i>
+        <span id="streak-count">0</span> day streak
+      </div>
+    </div>
+  </header>
+
+  <!-- Pages -->
+  <main class="content-area">
+
+    <!-- ===== DASHBOARD PAGE ===== -->
+    <section class="page active" id="page-dashboard">
+
+      <!-- Continue Learning Banner -->
+      <div class="continue-banner" id="continue-banner" style="display:none;">
+        <div class="continue-info">
+          <span class="continue-tag"><i class="fas fa-play-circle"></i> Continue Learning</span>
+          <h3 id="continue-title">Loading...</h3>
+          <p id="continue-phase">Phase</p>
+        </div>
+        <button class="btn btn-primary" id="continue-btn"><i class="fas fa-play"></i> Resume</button>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="stats-grid">
+        <div class="stat-card glass">
+          <div class="stat-icon" style="background: linear-gradient(135deg,#6366f1,#8b5cf6)">
+            <i class="fas fa-video"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value" id="stat-total">418</span>
+            <span class="stat-label">Total Videos</span>
+          </div>
+        </div>
+        <div class="stat-card glass">
+          <div class="stat-icon" style="background: linear-gradient(135deg,#10b981,#059669)">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value" id="stat-completed">0</span>
+            <span class="stat-label">Completed</span>
+          </div>
+        </div>
+        <div class="stat-card glass">
+          <div class="stat-icon" style="background: linear-gradient(135deg,#f59e0b,#d97706)">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value" id="stat-remaining">418</span>
+            <span class="stat-label">Remaining</span>
+          </div>
+        </div>
+        <div class="stat-card glass">
+          <div class="stat-icon" style="background: linear-gradient(135deg,#ec4899,#db2777)">
+            <i class="fas fa-percentage"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value" id="stat-pct">0%</span>
+            <span class="stat-label">Complete</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress Overview -->
+      <div class="two-col">
+        <!-- Overall Progress Chart -->
+        <div class="card glass chart-card">
+          <div class="card-header">
+            <h2><i class="fas fa-chart-pie"></i> Overall Progress</h2>
+          </div>
+          <div class="chart-wrap" style="height:260px; position:relative;">
+            <canvas id="overallChart"></canvas>
+          </div>
+          <div class="chart-legend">
+            <span class="legend-dot" style="background:#6366f1"></span> Completed &nbsp;
+            <span class="legend-dot" style="background:#334155"></span> Remaining
+          </div>
+        </div>
+
+        <!-- Phase Progress -->
+        <div class="card glass">
+          <div class="card-header">
+            <h2><i class="fas fa-layer-group"></i> Phase Progress</h2>
+          </div>
+          <div class="phase-progress-list" id="phase-progress-list"></div>
+        </div>
+      </div>
+
+      <!-- Playlist Progress -->
+      <div class="card glass">
+        <div class="card-header">
+          <h2><i class="fas fa-list"></i> Playlist Progress</h2>
+          <span class="badge" id="playlist-count-badge">0 playlists</span>
+        </div>
+        <div class="playlist-grid" id="playlist-grid"></div>
+      </div>
+
+    </section>
+
+    <!-- ===== ROADMAP PAGE ===== -->
+    <section class="page" id="page-roadmap">
+      <div class="roadmap-filters">
+        <button class="filter-btn active" data-filter="all">All Phases</button>
+        <button class="filter-btn" data-filter="1">Phase 1</button>
+        <button class="filter-btn" data-filter="2">Phase 2</button>
+        <button class="filter-btn" data-filter="3">Phase 3</button>
+        <button class="filter-btn" data-filter="4">Phase 4</button>
+        <button class="filter-btn" data-filter="5">Phase 5</button>
+      </div>
+      <div id="roadmap-container"></div>
+    </section>
+
+    <!-- ===== STATISTICS PAGE ===== -->
+    <section class="page" id="page-statistics">
+      <div class="stats-big-grid">
+        <div class="stat-card glass">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">
+            <i class="fas fa-video"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value" id="stats-completed">0</span>
+            <span class="stat-label">Videos Completed</span>
+          </div>
+        </div>
+        <div class="stat-card glass">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#10b981,#059669)">
+            <i class="fas fa-hourglass-half"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value" id="stats-hours">~0h</span>
+            <span class="stat-label">Est. Hours Learned</span>
+          </div>
+        </div>
+        <div class="stat-card glass">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706)">
+            <i class="fas fa-fire"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value" id="stats-streak">0</span>
+            <span class="stat-label">Day Streak</span>
+          </div>
+        </div>
+        <div class="stat-card glass">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#ec4899,#db2777)">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value" id="stats-phases">0</span>
+            <span class="stat-label">Phases Completed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="card glass chart-card">
+          <div class="card-header">
+            <h2><i class="fas fa-chart-bar"></i> Videos per Phase</h2>
+          </div>
+          <div style="height:300px; position:relative;">
+            <canvas id="phaseBarChart"></canvas>
+          </div>
+        </div>
+        <div class="card glass chart-card">
+          <div class="card-header">
+            <h2><i class="fas fa-chart-donut"></i> Completion by Section</h2>
+          </div>
+          <div style="height:300px; position:relative;">
+            <canvas id="sectionDonutChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="card glass">
+        <div class="card-header">
+          <h2><i class="fas fa-calendar-check"></i> Weekly Activity (Last 7 Days)</h2>
+        </div>
+        <div style="height:200px; position:relative;">
+          <canvas id="weeklyChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NOTES PAGE ===== -->
+    <section class="page" id="page-notes">
+      <div class="notes-layout">
+        <div class="notes-sidebar card glass">
+          <div class="card-header">
+            <h2><i class="fas fa-sticky-note"></i> My Notes</h2>
+            <button class="btn btn-primary btn-sm" id="new-note-btn"><i class="fas fa-plus"></i> New</button>
+          </div>
+          <div id="notes-list"></div>
+        </div>
+        <div class="notes-editor card glass">
+          <div id="notes-placeholder">
+            <div class="empty-state">
+              <i class="fas fa-sticky-note fa-3x"></i>
+              <h3>Select a note or create a new one</h3>
+              <p>Your notes are saved locally in your browser.</p>
+              <button class="btn btn-primary" id="new-note-btn2"><i class="fas fa-plus"></i> Create Note</button>
+            </div>
+          </div>
+          <div id="notes-edit-area" style="display:none;">
+            <div class="notes-edit-header">
+              <input type="text" id="note-title-input" placeholder="Note title..." class="note-title-input" />
+              <select id="note-video-select" class="note-video-select">
+                <option value="">Link to video (optional)</option>
+              </select>
+              <div class="note-actions">
+                <button class="btn btn-success btn-sm" id="save-note-btn"><i class="fas fa-save"></i> Save</button>
+                <button class="btn btn-danger btn-sm" id="delete-note-btn"><i class="fas fa-trash"></i> Delete</button>
+              </div>
+            </div>
+            <textarea id="note-content-input" placeholder="Write your notes here..." class="note-content-area"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SEARCH PAGE ===== -->
+    <section class="page" id="page-search">
+      <div class="search-hero">
+        <div class="search-bar-large glass">
+          <i class="fas fa-search"></i>
+          <input type="text" id="main-search-input" placeholder="Search videos, playlists, phases..." autofocus />
+          <button class="btn btn-primary" id="main-search-btn">Search</button>
+        </div>
+        <div class="search-filters">
+          <button class="filter-btn active" data-search-type="all">All</button>
+          <button class="filter-btn" data-search-type="video">Videos</button>
+          <button class="filter-btn" data-search-type="playlist">Playlists</button>
+          <button class="filter-btn" data-search-type="phase">Phases</button>
+        </div>
+      </div>
+      <div id="search-results"></div>
+    </section>
+
+  </main>
+</div>
+
+<!-- Video Player Modal -->
+<div class="modal-overlay" id="player-modal">
+  <div class="modal-content glass">
+    <div class="modal-header">
+      <div class="modal-title-area">
+        <span class="modal-phase-tag" id="modal-phase-tag">Phase 1</span>
+        <h2 class="modal-video-title" id="modal-video-title">Video Title</h2>
+        <div class="modal-meta">
+          <span id="modal-playlist-name"><i class="fas fa-list"></i> Playlist</span>
+          <span id="modal-video-num"><i class="fas fa-hashtag"></i> Video</span>
+          <span id="modal-status-tag" class="status-tag not-started">Not Started</span>
+        </div>
+      </div>
+      <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="player-container">
+      <div class="player-embed" id="player-embed">
+        <iframe id="yt-iframe" width="100%" height="100%" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="player-error" id="player-error" style="display:none;">
+          <i class="fas fa-exclamation-triangle fa-2x"></i>
+          <p>Embed not available for this video</p>
+          <a id="yt-fallback-link" href="#" target="_blank" class="btn btn-primary">
+            <i class="fab fa-youtube"></i> Watch on YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <div class="progress-controls">
+        <span class="progress-label-sm">Progress:</span>
+        <div class="progress-buttons">
+          <button class="status-btn" data-status="not-started" id="btn-not-started"><i class="fas fa-circle"></i> Not Started</button>
+          <button class="status-btn" data-status="in-progress" id="btn-in-progress"><i class="fas fa-spinner"></i> In Progress</button>
+          <button class="status-btn active" data-status="completed" id="btn-completed"><i class="fas fa-check-circle"></i> Completed</button>
+        </div>
+      </div>
+      <div class="nav-buttons">
+        <button class="btn btn-secondary btn-sm" id="prev-video-btn"><i class="fas fa-chevron-left"></i> Prev</button>
+        <a id="yt-open-link" href="#" target="_blank" class="btn btn-youtube btn-sm">
+          <i class="fab fa-youtube"></i> YouTube
+        </a>
+        <button class="btn btn-primary btn-sm" id="next-video-btn">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+    <!-- Notes in modal -->
+    <div class="modal-notes-section">
+      <div class="modal-notes-header">
+        <h4><i class="fas fa-sticky-note"></i> Notes for this video</h4>
+        <button class="btn btn-secondary btn-sm" id="modal-note-toggle"><i class="fas fa-chevron-down"></i></button>
+      </div>
+      <div id="modal-notes-area" class="modal-notes-area" style="display:none;">
+        <textarea id="modal-note-input" placeholder="Write notes for this video..."></textarea>
+        <button class="btn btn-primary btn-sm" id="modal-save-note"><i class="fas fa-save"></i> Save Note</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
