@@ -114,14 +114,4 @@ js/
 | Notes | Notes | (click nav) |
 | Search | Search | (click nav) |
 
-## 🚧 Not Yet Implemented
-- Firebase / cloud sync for cross-device progress
-- Video duration tracking
-- Offline/PWA mode
-- Export progress as PDF/CSV
 
-## 📌 Recommended Next Steps
-1. Add video durations (via YouTube API) for accurate hour tracking
-2. Implement PWA with service worker for offline access
-3. Add progress export/import functionality
-4. Add a "Certificates" section for completed phases
