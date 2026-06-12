@@ -1,6 +1,6 @@
 // ============================================================
 //  AI ROADMAP DATA — All videos, playlists, phases
-//  Total: 418 playlist videos + 11 standalone videos
+//  Cleaned: skippable/outdated content removed (June 2025)
 // ============================================================
 
 const ROADMAP_DATA = {
@@ -58,13 +58,6 @@ const ROADMAP_DATA = {
             { id:"v__FbZI9mtSSM", title:"Probability: Binomial Distribution", videoId:"_FbZI9mtSSM", num:8 },
             { id:"v_nl9WiZMZnYs", title:"Bernoulli Distribution", videoId:"nl9WiZMZnYs", num:9 },
             { id:"v_BbLfV0wOeyc", title:"Data Science & Statistics Tutorial: The Poisson Distribution", videoId:"BbLfV0wOeyc", num:10 }
-          ]
-        },
-        {
-          id: "s_jupyter", title: "Jupyter Notebook + Google Colab",
-          icon: "fas fa-book", phase: 1,
-          videos: [
-            { id:"v_5pf0_bpNbkw", title:"Jupyter Notebook Complete Guide", videoId:"5pf0_bpNbkw", num:1 }
           ]
         }
       ]
@@ -237,78 +230,54 @@ const ROADMAP_DATA = {
             { id:"v_Z8noL_0M4tw", title:"Softmax Regression || Multinomial Logistic Regression", videoId:"Z8noL_0M4tw", num:79 },
             { id:"v_WnBYW_DX3sM", title:"Polynomial Features in Logistic Regression | Non Linear Logistic Regression", videoId:"WnBYW_DX3sM", num:80 },
             { id:"v_ay_OcblJasE", title:"Logistic Regression Hyperparameters || Logistic Regression Part 8", videoId:"ay_OcblJasE", num:81 },
-            { id:"v_Ty7knppVo9E_ml", title:"Naive Bayes Classifier | Part 1 | Conditional Probability [ML Series]", videoId:"Ty7knppVo9E", num:82 },
-            { id:"v_0GD480CnrO4_ml", title:"Naive Bayes Classifier | Part 2 | Independent Events [ML Series]", videoId:"0GD480CnrO4", num:83 },
-            { id:"v_nneTjTYikBE_ml", title:"Naive Bayes Classifier | Part 3 | Mutually Exclusive Events [ML Series]", videoId:"nneTjTYikBE", num:84 },
-            { id:"v_Oqw-v-Z7PuU_ml", title:"Naive Bayes Classifier | Part 4 | Bayes Theorem [ML Series]", videoId:"Oqw-v-Z7PuU", num:85 },
-            { id:"v_aAEHjXDHtbE_ml", title:"Naive Bayes Classifier | Part 5 | Problem based upon Bayes Theorem [ML Series]", videoId:"aAEHjXDHtbE", num:86 },
-            { id:"v_ZR1_QtLk_4U", title:"Naive Bayes Classifier | Part 6 | Intuition", videoId:"ZR1_QtLk_4U", num:87 },
-            { id:"v_2PVRG45eVrY", title:"Naive Bayes Classifier | Part 7 | Mathematics behind Naive Bayes", videoId:"2PVRG45eVrY", num:88 },
-            { id:"v_DeeWsqoY4Eo", title:"Naive Bayes Classifier | Part 8 | Simple Example Code", videoId:"DeeWsqoY4Eo", num:89 },
-            { id:"v_TCgK2nBJx9o", title:"Naive Bayes Part 9 | Handling Numerical Data", videoId:"TCgK2nBJx9o", num:90 },
-            { id:"v_abnL_GUGub4", title:"What is K Nearest Neighbors? | KNN Explained", videoId:"abnL_GUGub4", num:91 },
-            { id:"v_ugTxMLjLS8M", title:"Support Vector Machines | Geometric Intuition", videoId:"ugTxMLjLS8M", num:92 },
-            { id:"v_yCAlHPDgWtM", title:"Mathematics of SVM | Hard margin SVM", videoId:"yCAlHPDgWtM", num:93 },
-            { id:"v_utqrvIFAE1k", title:"Mathematics of Support Vector Machine | Soft Margin SVM", videoId:"utqrvIFAE1k", num:94 },
-            { id:"v_egxjT0p7_K8", title:"Kernel Trick in SVM | Geometric Intuition", videoId:"egxjT0p7_K8", num:95 },
-            { id:"v_pjvmVMDrzVU", title:"Kernel Trick in SVM | Code Example", videoId:"pjvmVMDrzVU", num:96 },
-            { id:"v_IZnno-dKgVQ", title:"Decision Trees Geometric Intuition | Entropy | Gini impurity", videoId:"IZnno-dKgVQ", num:97 },
-            { id:"v_mDEV0Iucwz0", title:"Decision Trees - Hyperparameters | Overfitting and Underfitting", videoId:"mDEV0Iucwz0", num:98 },
-            { id:"v_RANHxyAvtM4", title:"Regression Trees | Decision Trees Part 3", videoId:"RANHxyAvtM4", num:99 },
-            { id:"v_SlMZqfvl5uw", title:"Awesome Decision Tree Visualization using dtreeviz library", videoId:"SlMZqfvl5uw", num:100 },
-            { id:"v_bHK1fE_BUms", title:"Introduction to Ensemble Learning", videoId:"bHK1fE_BUms", num:101 },
-            { id:"v__W1i-c_6rOk", title:"Voting Ensemble | Introduction and Core Idea | Part 1", videoId:"_W1i-c_6rOk", num:102 },
-            { id:"v_pGQnNYdPTvY", title:"Voting Ensemble | Voting Classifier | Hard Voting Vs Soft Voting | Part 2", videoId:"pGQnNYdPTvY", num:103 },
-            { id:"v_ut4vh59rGkw", title:"Voting Ensemble | Regression | Part 3", videoId:"ut4vh59rGkw", num:104 },
-            { id:"v_LUiBOAy7x6Y", title:"Bagging | Introduction | Part 1", videoId:"LUiBOAy7x6Y", num:105 },
-            { id:"v_-1T54G_E-ys", title:"Bagging Ensemble | Part 2 | Bagging Classifiers", videoId:"-1T54G_E-ys", num:106 },
-            { id:"v_HYVzrETXbkE", title:"Bagging Ensemble | Part 3 | Bagging Regressor", videoId:"HYVzrETXbkE", num:107 },
-            { id:"v_F9uESCHGjhA", title:"Introduction to Random Forest | Intuition behind the Algorithm", videoId:"F9uESCHGjhA", num:108 },
-            { id:"v_jHgG4gjuFAk", title:"How Random Forest Performs So Well? Bias Variance Trade-Off", videoId:"jHgG4gjuFAk", num:109 },
-            { id:"v_l93jRojZMqU", title:"Bagging Vs Random Forest", videoId:"l93jRojZMqU", num:110 },
-            { id:"v_WOFVY_wQ9wU", title:"Random Forest Hyper-parameters", videoId:"WOFVY_wQ9wU", num:111 },
-            { id:"v_4Im0CT43QxY", title:"Hyperparameter Tuning Random Forest using GridSearchCV and RandomizedSearchCV", videoId:"4Im0CT43QxY", num:112 },
-            { id:"v_tdDhyFoSG94", title:"OOB Score | Out of Bag Evaluation in Random Forest", videoId:"tdDhyFoSG94", num:113 },
-            { id:"v_R47JAob1xBY", title:"Feature Importance using Random Forest and Decision Trees", videoId:"R47JAob1xBY", num:114 },
-            { id:"v_sFKnP0iP0K0", title:"How Adaboost Classifier Works? | Geometric Intuition", videoId:"sFKnP0iP0K0", num:115 },
-            { id:"v_RT0t9a3Xnfw", title:"AdaBoost - A Step by Step Explanation", videoId:"RT0t9a3Xnfw", num:116 },
-            { id:"v_a20TaKNsriE", title:"AdaBoost Algorithm | Code from Scratch", videoId:"a20TaKNsriE", num:117 },
-            { id:"v_JmXnztjULnQ", title:"AdaBoost Hyperparameters | GridSearchCV in Adaboost", videoId:"JmXnztjULnQ", num:118 },
-            { id:"v_7M5oWXCpDEw", title:"Bagging Vs Boosting", videoId:"7M5oWXCpDEw", num:119 },
-            { id:"v_fbKz7N92mhQ", title:"Gradient Boosting Explained | How Gradient Boosting Works?", videoId:"fbKz7N92mhQ", num:120 },
-            { id:"v_nMNiTZm-qY0", title:"Gradient Boosting Regression Part 2 | Mathematics of Gradient Boosting", videoId:"nMNiTZm-qY0", num:121 },
-            { id:"v_4p5EQtyxSyI", title:"Gradient Boosting for Classification | Geometric Intuition", videoId:"4p5EQtyxSyI", num:122 },
-            { id:"v_C6aDw4y8qJ0", title:"Introduction to XGBOOST | Machine Learning", videoId:"C6aDw4y8qJ0", num:123 },
-            { id:"v_gmp2tS2joaA", title:"XGBoost for Regression | XGBoost Part 2", videoId:"gmp2tS2joaA", num:124 },
-            { id:"v_mELtxVUNNrw", title:"XGBoost For Classification", videoId:"mELtxVUNNrw", num:125 },
-            { id:"v_0Eo-_5bfers", title:"The Maths Behind XGBoost | Machine Learning", videoId:"0Eo-_5bfers", num:126 },
-            { id:"v_O-aDHBGMqXA", title:"Stacking and Blending Ensembles", videoId:"O-aDHBGMqXA", num:127 },
-            { id:"v_5shTLzwAdEc", title:"K-Means Clustering Algorithm | Geometric Intuition", videoId:"5shTLzwAdEc", num:128 },
-            { id:"v_UPvv9SprgVo", title:"K-Means Clustering Algorithm in Python | Practical Example", videoId:"UPvv9SprgVo", num:129 },
-            { id:"v_MFraC1JObUo", title:"K-Means Clustering Algorithm From Scratch In Python", videoId:"MFraC1JObUo", num:130 },
-            { id:"v_Ka5i9TVUT-E", title:"Agglomerative Hierarchical Clustering | Python Code Example", videoId:"Ka5i9TVUT-E", num:131 },
-            { id:"v_1_bLnsNmhCI", title:"DBSCAN Clustering Algorithms | Density Based Clustering", videoId:"1_bLnsNmhCI", num:132 },
-            { id:"v_yh2AKoJCV3k", title:"Imbalanced Data in Machine Learning | Undersampling | Oversampling | SMOTE", videoId:"yh2AKoJCV3k", num:133 },
-            { id:"v_E2b3SKMw934", title:"Hyperparameter Tuning using Optuna | Bayesian Optimization", videoId:"E2b3SKMw934", num:134 }
-          ]
-        },
-        {
-          id: "s08", title: "ML End-to-End Projects — Krish Naik",
-          icon: "fas fa-project-diagram", phase: 3,
-          videos: [
-            { id:"v_NuwUnRpxq2c", title:"Announcing End To End Data Science Projects In Hindi", videoId:"NuwUnRpxq2c", num:1 },
-            { id:"v_8KtY8ihZ8ME", title:"Complete Git And Github Tutorials And Crash Course", videoId:"8KtY8ihZ8ME", num:2 },
-            { id:"v_KF-rDqQfqz0", title:"Complete Python Flask Tutorial For Data Science Projects", videoId:"KF-rDqQfqz0", num:3 },
-            { id:"v_i7EDCiLJgt0", title:"Tutorial 1 - End To End Data Science Projects - Project Github And Code Setup", videoId:"i7EDCiLJgt0", num:4 },
-            { id:"v_NL7Kshd2PW8", title:"Tutorial 2 - Automating Project Structure Using Template.py", videoId:"NL7Kshd2PW8", num:5 },
-            { id:"v_IdlH1-JGra4", title:"Tutorial 3 - Cookiecutter Project Templating", videoId:"IdlH1-JGra4", num:6 },
-            { id:"v_hj68xarvkmk", title:"Tutorial 4 - Logging And Exception Handling", videoId:"hj68xarvkmk", num:7 },
-            { id:"v_fjYnYF_mu78", title:"Tutorial 5 - Data Ingestion, Reading Data From MYSQL", videoId:"fjYnYF_mu78", num:8 },
-            { id:"v_RKSY8keIQm8", title:"Tutorial 6 - Data Versioning Using DVC", videoId:"RKSY8keIQm8", num:9 },
-            { id:"v_MMSMBMFnRMk", title:"Tutorial 7 - EDA And Feature Engineering", videoId:"MMSMBMFnRMk", num:10 },
-            { id:"v_aVR_pwe_aVc", title:"Tutorial 8 - Data Transformation Techniques", videoId:"aVR_pwe_aVc", num:11 },
-            { id:"v_UPmWd6EbCsw", title:"Tutorial 9 - Model Training And Hyperparameter Training", videoId:"UPmWd6EbCsw", num:12 },
-            { id:"v_qIBacmPg1qY", title:"Tutorial 10 - Integrating With MLFLOW And Dagshub", videoId:"qIBacmPg1qY", num:13 }
+            { id:"v_ZR1_QtLk_4U", title:"Naive Bayes Classifier | Part 6 | Intuition", videoId:"ZR1_QtLk_4U", num:82 },
+            { id:"v_2PVRG45eVrY", title:"Naive Bayes Classifier | Part 7 | Mathematics behind Naive Bayes", videoId:"2PVRG45eVrY", num:83 },
+            { id:"v_DeeWsqoY4Eo", title:"Naive Bayes Classifier | Part 8 | Simple Example Code", videoId:"DeeWsqoY4Eo", num:84 },
+            { id:"v_TCgK2nBJx9o", title:"Naive Bayes Part 9 | Handling Numerical Data", videoId:"TCgK2nBJx9o", num:85 },
+            { id:"v_abnL_GUGub4", title:"What is K Nearest Neighbors? | KNN Explained", videoId:"abnL_GUGub4", num:86 },
+            { id:"v_ugTxMLjLS8M", title:"Support Vector Machines | Geometric Intuition", videoId:"ugTxMLjLS8M", num:87 },
+            { id:"v_yCAlHPDgWtM", title:"Mathematics of SVM | Hard margin SVM", videoId:"yCAlHPDgWtM", num:88 },
+            { id:"v_utqrvIFAE1k", title:"Mathematics of Support Vector Machine | Soft Margin SVM", videoId:"utqrvIFAE1k", num:89 },
+            { id:"v_egxjT0p7_K8", title:"Kernel Trick in SVM | Geometric Intuition", videoId:"egxjT0p7_K8", num:90 },
+            { id:"v_pjvmVMDrzVU", title:"Kernel Trick in SVM | Code Example", videoId:"pjvmVMDrzVU", num:91 },
+            { id:"v_IZnno-dKgVQ", title:"Decision Trees Geometric Intuition | Entropy | Gini impurity", videoId:"IZnno-dKgVQ", num:92 },
+            { id:"v_mDEV0Iucwz0", title:"Decision Trees - Hyperparameters | Overfitting and Underfitting", videoId:"mDEV0Iucwz0", num:93 },
+            { id:"v_RANHxyAvtM4", title:"Regression Trees | Decision Trees Part 3", videoId:"RANHxyAvtM4", num:94 },
+            { id:"v_SlMZqfvl5uw", title:"Awesome Decision Tree Visualization using dtreeviz library", videoId:"SlMZqfvl5uw", num:95 },
+            { id:"v_bHK1fE_BUms", title:"Introduction to Ensemble Learning", videoId:"bHK1fE_BUms", num:96 },
+            { id:"v__W1i-c_6rOk", title:"Voting Ensemble | Introduction and Core Idea | Part 1", videoId:"_W1i-c_6rOk", num:97 },
+            { id:"v_pGQnNYdPTvY", title:"Voting Ensemble | Voting Classifier | Hard Voting Vs Soft Voting | Part 2", videoId:"pGQnNYdPTvY", num:98 },
+            { id:"v_ut4vh59rGkw", title:"Voting Ensemble | Regression | Part 3", videoId:"ut4vh59rGkw", num:99 },
+            { id:"v_LUiBOAy7x6Y", title:"Bagging | Introduction | Part 1", videoId:"LUiBOAy7x6Y", num:100 },
+            { id:"v_-1T54G_E-ys", title:"Bagging Ensemble | Part 2 | Bagging Classifiers", videoId:"-1T54G_E-ys", num:101 },
+            { id:"v_HYVzrETXbkE", title:"Bagging Ensemble | Part 3 | Bagging Regressor", videoId:"HYVzrETXbkE", num:102 },
+            { id:"v_F9uESCHGjhA", title:"Introduction to Random Forest | Intuition behind the Algorithm", videoId:"F9uESCHGjhA", num:103 },
+            { id:"v_jHgG4gjuFAk", title:"How Random Forest Performs So Well? Bias Variance Trade-Off", videoId:"jHgG4gjuFAk", num:104 },
+            { id:"v_l93jRojZMqU", title:"Bagging Vs Random Forest", videoId:"l93jRojZMqU", num:105 },
+            { id:"v_WOFVY_wQ9wU", title:"Random Forest Hyper-parameters", videoId:"WOFVY_wQ9wU", num:106 },
+            { id:"v_4Im0CT43QxY", title:"Hyperparameter Tuning Random Forest using GridSearchCV and RandomizedSearchCV", videoId:"4Im0CT43QxY", num:107 },
+            { id:"v_tdDhyFoSG94", title:"OOB Score | Out of Bag Evaluation in Random Forest", videoId:"tdDhyFoSG94", num:108 },
+            { id:"v_R47JAob1xBY", title:"Feature Importance using Random Forest and Decision Trees", videoId:"R47JAob1xBY", num:109 },
+            { id:"v_sFKnP0iP0K0", title:"How Adaboost Classifier Works? | Geometric Intuition", videoId:"sFKnP0iP0K0", num:110 },
+            { id:"v_RT0t9a3Xnfw", title:"AdaBoost - A Step by Step Explanation", videoId:"RT0t9a3Xnfw", num:111 },
+            { id:"v_a20TaKNsriE", title:"AdaBoost Algorithm | Code from Scratch", videoId:"a20TaKNsriE", num:112 },
+            { id:"v_JmXnztjULnQ", title:"AdaBoost Hyperparameters | GridSearchCV in Adaboost", videoId:"JmXnztjULnQ", num:113 },
+            { id:"v_7M5oWXCpDEw", title:"Bagging Vs Boosting", videoId:"7M5oWXCpDEw", num:114 },
+            { id:"v_fbKz7N92mhQ", title:"Gradient Boosting Explained | How Gradient Boosting Works?", videoId:"fbKz7N92mhQ", num:115 },
+            { id:"v_nMNiTZm-qY0", title:"Gradient Boosting Regression Part 2 | Mathematics of Gradient Boosting", videoId:"nMNiTZm-qY0", num:116 },
+            { id:"v_4p5EQtyxSyI", title:"Gradient Boosting for Classification | Geometric Intuition", videoId:"4p5EQtyxSyI", num:117 },
+            { id:"v_C6aDw4y8qJ0", title:"Introduction to XGBOOST | Machine Learning", videoId:"C6aDw4y8qJ0", num:118 },
+            { id:"v_gmp2tS2joaA", title:"XGBoost for Regression | XGBoost Part 2", videoId:"gmp2tS2joaA", num:119 },
+            { id:"v_mELtxVUNNrw", title:"XGBoost For Classification", videoId:"mELtxVUNNrw", num:120 },
+            { id:"v_0Eo-_5bfers", title:"The Maths Behind XGBoost | Machine Learning", videoId:"0Eo-_5bfers", num:121 },
+            { id:"v_O-aDHBGMqXA", title:"Stacking and Blending Ensembles", videoId:"O-aDHBGMqXA", num:122 },
+            { id:"v_5shTLzwAdEc", title:"K-Means Clustering Algorithm | Geometric Intuition", videoId:"5shTLzwAdEc", num:123 },
+            { id:"v_UPvv9SprgVo", title:"K-Means Clustering Algorithm in Python | Practical Example", videoId:"UPvv9SprgVo", num:124 },
+            { id:"v_MFraC1JObUo", title:"K-Means Clustering Algorithm From Scratch In Python", videoId:"MFraC1JObUo", num:125 },
+            { id:"v_Ka5i9TVUT-E", title:"Agglomerative Hierarchical Clustering | Python Code Example", videoId:"Ka5i9TVUT-E", num:126 },
+            { id:"v_1_bLnsNmhCI", title:"DBSCAN Clustering Algorithms | Density Based Clustering", videoId:"1_bLnsNmhCI", num:127 },
+            { id:"v_yh2AKoJCV3k", title:"Imbalanced Data in Machine Learning | Undersampling | Oversampling | SMOTE", videoId:"yh2AKoJCV3k", num:128 },
+            { id:"v_E2b3SKMw934", title:"Hyperparameter Tuning using Optuna | Bayesian Optimization", videoId:"E2b3SKMw934", num:129 }
           ]
         },
         {
@@ -316,9 +285,8 @@ const ROADMAP_DATA = {
           icon: "fas fa-code", phase: 3,
           videos: [
             { id:"v_YncZ0WwxyzU", title:"Spam Classifier Project", videoId:"YncZ0WwxyzU", num:1 },
-            { id:"v_Nb21OhaW8GY", title:"Chatbot Project", videoId:"Nb21OhaW8GY", num:2 },
-            { id:"v_1xtrIEwY_zY", title:"Movie Recommender Project", videoId:"1xtrIEwY_zY", num:3 },
-            { id:"v_SQHfry4xmdM", title:"Portfolio Projects Guide", videoId:"SQHfry4xmdM", num:4 }
+            { id:"v_1xtrIEwY_zY", title:"Movie Recommender Project", videoId:"1xtrIEwY_zY", num:2 },
+            { id:"v_SQHfry4xmdM", title:"Portfolio Projects Guide", videoId:"SQHfry4xmdM", num:3 }
           ]
         }
       ]
@@ -420,70 +388,6 @@ const ROADMAP_DATA = {
           ]
         },
         {
-          id: "s10", title: "TensorFlow / Keras — CodeWithHarry",
-          icon: "fas fa-network-wired", phase: 4,
-          videos: [
-            { id:"v_Mubj_fqiAv8", title:"Introduction | Deep Learning Tutorial 1 (Tensorflow Tutorial)", videoId:"Mubj_fqiAv8", num:1 },
-            { id:"v_yfsTZbwgMSE", title:"Why deep learning is becoming so popular? | Deep Learning Tutorial 2", videoId:"yfsTZbwgMSE", num:2 },
-            { id:"v_VhRtaziEWd4", title:"What is a neuron? | Deep Learning Tutorial 3", videoId:"VhRtaziEWd4", num:3 },
-            { id:"v_ER2It2mIagI", title:"Neural Network Simply Explained | Deep Learning Tutorial 4", videoId:"ER2It2mIagI", num:4 },
-            { id:"v_VC-EliTgMEM", title:"Install tensorflow 2.0 | Deep Learning Tutorial 5", videoId:"VC-EliTgMEM", num:5 },
-            { id:"v_z-ZR_8BZ1wQ", title:"Pytorch vs Tensorflow vs Keras | Deep Learning Tutorial 6", videoId:"z-ZR_8BZ1wQ", num:6 },
-            { id:"v_iqQgED9vV7k", title:"Neural Network For Handwritten Digits Classification | Deep Learning Tutorial 7", videoId:"iqQgED9vV7k", num:7 },
-            { id:"v_icZItWxw7AI", title:"Activation Functions | Deep Learning Tutorial 8", videoId:"icZItWxw7AI", num:8 },
-            { id:"v_cT4pQT5Da0Q", title:"Derivatives | Deep Learning Tutorial 9", videoId:"cT4pQT5Da0Q", num:9 },
-            { id:"v_Wibxjrxf5ko", title:"Matrix Basics | Deep Learning Tutorial 10", videoId:"Wibxjrxf5ko", num:10 },
-            { id:"v_E1yyaLRUnLo", title:"Loss or Cost Function | Deep Learning Tutorial 11", videoId:"E1yyaLRUnLo", num:11 },
-            { id:"v_pXGBHV3y8rs", title:"Gradient Descent For Neural Network | Deep Learning Tutorial 12", videoId:"pXGBHV3y8rs", num:12 },
-            { id:"v_PQCE9ChuIDY", title:"Implement Neural Network In Python | Deep Learning Tutorial 13", videoId:"PQCE9ChuIDY", num:13 },
-            { id:"v_IU5fuoYBTAM", title:"Stochastic GD vs Batch GD vs Mini Batch GD | DL Tutorial 14", videoId:"IU5fuoYBTAM", num:14 },
-            { id:"v_5ogmEkujoqE", title:"Chain Rule | Deep Learning Tutorial 15", videoId:"5ogmEkujoqE", num:15 },
-            { id:"v_9SdLOcGnebU", title:"Tensorboard Introduction | Deep Learning Tutorial 16", videoId:"9SdLOcGnebU", num:16 },
-            { id:"v_YmDaqXMIoeY", title:"GPU bench-marking with image classification | Deep Learning Tutorial 17", videoId:"YmDaqXMIoeY", num:17 },
-            { id:"v_MSBY28IJ47U", title:"Customer churn prediction using ANN | Deep Learning Tutorial 18", videoId:"MSBY28IJ47U", num:18 },
-            { id:"v_2osIZ-dSPGE", title:"Precision, Recall, F1 score | Deep Learning Tutorial 19", videoId:"2osIZ-dSPGE", num:19 },
-            { id:"v_lcI8ukTUEbo", title:"Dropout Regularization | Deep Learning Tutorial 20", videoId:"lcI8ukTUEbo", num:20 },
-            { id:"v_JnlM4yLFNuo", title:"Handling imbalanced dataset | Deep Learning Tutorial 21", videoId:"JnlM4yLFNuo", num:21 },
-            { id:"v_aDpnaxPAmtU", title:"Applications of computer vision | Deep Learning Tutorial 22", videoId:"aDpnaxPAmtU", num:22 },
-            { id:"v_zfiSAzpy9NM", title:"Simple explanation of convolutional neural network | Deep Learning Tutorial 23", videoId:"zfiSAzpy9NM", num:23 },
-            { id:"v_7HPwo4wnJeA", title:"Image classification using CNN (CIFAR10 dataset) | Deep Learning Tutorial 24", videoId:"7HPwo4wnJeA", num:24 },
-            { id:"v_oDAPkZ53zKk", title:"Convolution padding and stride | Deep Learning Tutorial 25", videoId:"oDAPkZ53zKk", num:25 },
-            { id:"v_mTVf7BN7S8w", title:"Data augmentation to address overfitting | Deep Learning Tutorial 26", videoId:"mTVf7BN7S8w", num:26 },
-            { id:"v_LsdxvjLWkIY", title:"Transfer Learning | Deep Learning Tutorial 27", videoId:"LsdxvjLWkIY", num:27 },
-            { id:"v_taC5pMCm70U", title:"Image classification vs Object detection vs Image Segmentation | Deep Learning 28", videoId:"taC5pMCm70U", num:28 },
-            { id:"v_SfqN-Hc5two", title:"Popular datasets for computer vision | Deep Learning 29", videoId:"SfqN-Hc5two", num:29 },
-            { id:"v_AimW3j7M2Uw", title:"Sliding Window Object Detection | Deep Learning Tutorial 30", videoId:"AimW3j7M2Uw", num:30 },
-            { id:"v_ag3DLKsl2vk", title:"What is YOLO algorithm? | Deep Learning Tutorial 31", videoId:"ag3DLKsl2vk", num:31 },
-            { id:"v_IfRMV2MY9n0", title:"Object detection using YOLO v4 | Deep Learning Tutorial 32", videoId:"IfRMV2MY9n0", num:32 },
-            { id:"v_Y2wfIKQyd1I", title:"What is Recurrent Neural Network (RNN)? Deep Learning Tutorial 33", videoId:"Y2wfIKQyd1I", num:33 },
-            { id:"v_EzsXi4WzelI", title:"Types of RNN | Recurrent Neural Network Types | Deep Learning Tutorial 34", videoId:"EzsXi4WzelI", num:34 },
-            { id:"v_qowp6SQ9_Oo", title:"Vanishing and exploding gradients | Deep Learning Tutorial 35", videoId:"qowp6SQ9_Oo", num:35 },
-            { id:"v_LfnrRPFhkuY", title:"Simple Explanation of LSTM | Deep Learning Tutorial 36", videoId:"LfnrRPFhkuY", num:36 },
-            { id:"v_tOuXgORsXJ4", title:"Simple Explanation of GRU | Deep Learning Tutorial 37", videoId:"tOuXgORsXJ4", num:37 },
-            { id:"v_atYPhweJ7ao", title:"Bidirectional RNN | Deep Learning Tutorial 38", videoId:"atYPhweJ7ao", num:38 },
-            { id:"v_sZGuyTLjsco", title:"Converting words to numbers, Word Embeddings | Deep Learning Tutorial 39", videoId:"sZGuyTLjsco", num:39 },
-            { id:"v_Fuw0wv3X-0o", title:"Word embedding using keras embedding layer | Deep Learning Tutorial 40", videoId:"Fuw0wv3X-0o", num:40 },
-            { id:"v_hQwFeIupNP0", title:"What is Word2Vec? A Simple Explanation | Deep Learning Tutorial 41", videoId:"hQwFeIupNP0", num:41 },
-            { id:"v_Q2NtCcqmIww", title:"Word2Vec Part 2 | Implement word2vec in gensim | Deep Learning Tutorial 42", videoId:"Q2NtCcqmIww", num:42 },
-            { id:"v_95OyAjIZAbs", title:"Distributed Training On NVIDIA DGX Station A100 | Deep Learning Tutorial 43", videoId:"95OyAjIZAbs", num:43 },
-            { id:"v_VFEOskzhhbc", title:"Tensorflow Input Pipeline | tf Dataset | Deep Learning Tutorial 44", videoId:"VFEOskzhhbc", num:44 },
-            { id:"v_MLEKEplgCas", title:"Optimize Tensorflow Pipeline Performance | Deep Learning Tutorial 45", videoId:"MLEKEplgCas", num:45 },
-            { id:"v_7kLi8u2dJz0", title:"What is BERT? | Deep Learning Tutorial 46", videoId:"7kLi8u2dJz0", num:46 },
-            { id:"v_hOCDJyZ6quA", title:"Text Classification Using BERT & Tensorflow | Deep Learning Tutorial 47", videoId:"hOCDJyZ6quA", num:47 },
-            { id:"v_P-5sMcpTE0g", title:"tf serving tutorial | tensorflow serving | Deep Learning Tutorial 48", videoId:"P-5sMcpTE0g", num:48 },
-            { id:"v_v1oHf1KV6kM", title:"Quantization in deep learning | Deep Learning Tutorial 49", videoId:"v1oHf1KV6kM", num:49 },
-            { id:"v_ZhAz268Hdpw", title:"Transformers Explained | Simple Explanation of Transformers", videoId:"ZhAz268Hdpw", num:50 },
-            { id:"v_dGtDTjYs3xc", title:"Deep learning project end to end | Potato Disease Classification - 1", videoId:"dGtDTjYs3xc", num:51 },
-            { id:"v_bns5ELvbzVk", title:"Potato Disease Classification - 2: Data collection, preprocessing", videoId:"bns5ELvbzVk", num:52 },
-            { id:"v_ZN6P_GEJ7lk", title:"Potato Disease Classification - 3: Model Building", videoId:"ZN6P_GEJ7lk", num:53 },
-            { id:"v_t6NI0u_lgNo", title:"Potato Disease Classification - 4: FastAPI/tf serving Backend", videoId:"t6NI0u_lgNo", num:54 },
-            { id:"v_uldlsT98Bbs", title:"Potato Disease Classification - 5: Website (In React JS)", videoId:"uldlsT98Bbs", num:55 },
-            { id:"v_DQFerxe6o5g", title:"Potato Disease Classification - 6: ImageDataGenerator API", videoId:"DQFerxe6o5g", num:56 },
-            { id:"v_ra4j7yDlakQ", title:"Potato Disease Classification - 7: Model Deployment To GCP", videoId:"ra4j7yDlakQ", num:57 },
-            { id:"v_mSf0j8qkkFI", title:"Potato Disease Classification - 8: Mobile App in React Native", videoId:"mSf0j8qkkFI", num:58 }
-          ]
-        },
-        {
           id: "s11", title: "PyTorch Full Course — CampusX",
           icon: "fas fa-fire", phase: 4,
           videos: [
@@ -535,8 +439,7 @@ const ROADMAP_DATA = {
             { id:"v_vo6gQz5lYRI", title:"Text Representation | NLP Lecture 4 | Bag of Words | Tf-Idf", videoId:"vo6gQz5lYRI", num:4 },
             { id:"v_DDfLc5AHoJI", title:"Word2vec Complete Tutorial | CBOW and Skip-gram", videoId:"DDfLc5AHoJI", num:5 },
             { id:"v_Qbd7U9F0QQ8", title:"Text Classification | NLP Lecture 6 | Average Word2Vec", videoId:"Qbd7U9F0QQ8", num:6 },
-            { id:"v_269IGagoJfs", title:"POS Tagging | Part of Speech Tagging in NLP | Hidden Markov Models", videoId:"269IGagoJfs", num:7 },
-            { id:"v_1fvQU5yPjFs", title:"Duplicate Question Pairs | Quora Question Pairs | NLP Projects", videoId:"1fvQU5yPjFs", num:8 }
+            { id:"v_1fvQU5yPjFs", title:"Duplicate Question Pairs | Quora Question Pairs | NLP Projects", videoId:"1fvQU5yPjFs", num:7 }
           ]
         },
         {
@@ -585,8 +488,7 @@ const ROADMAP_DATA = {
             { id:"v_M17qwKnmG38", title:"Improving the FastAPI API | Video 8", videoId:"M17qwKnmG38", num:9 },
             { id:"v_GToyQTGDOS4", title:"Docker for Machine Learning | Docker Crash Course", videoId:"GToyQTGDOS4", num:10 },
             { id:"v_jlLs6hfAga4", title:"FastAPI + Docker Tutorial for Beginners", videoId:"jlLs6hfAga4", num:11 },
-            { id:"v_X0lnToYN21k", title:"How to Deploy a FastAPI API on AWS | Video 10", videoId:"X0lnToYN21k", num:12 },
-            { id:"v_VjPrWc0NQP0", title:"FastAPI Course Launch", videoId:"VjPrWc0NQP0", num:13 }
+            { id:"v_X0lnToYN21k", title:"How to Deploy a FastAPI API on AWS | Video 10", videoId:"X0lnToYN21k", num:12 }
           ]
         },
         {
